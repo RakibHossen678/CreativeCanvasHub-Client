@@ -1,5 +1,5 @@
 
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
   const links = (
@@ -16,7 +16,7 @@ const Header = () => {
           <a>Home</a>
         </li>
       </NavLink>
-      <NavLink to='allCraft' className={({ isActive }) =>
+      <NavLink to='/allCraft' className={({ isActive }) =>
           isActive
             ? "text-[#00BCD4] border-[#00BCD4] border-2 px-2 py-1 rounded-lg"
             : "font bold"
@@ -79,8 +79,8 @@ const Header = () => {
         <ul className=" space-x-7 menu-horizontal px-1">{links}</ul>
       </div>
       <div className="navbar-end space-x-4">
-        <a className="px-4 py-1  rounded-md bg-[#4DD0E1]">Login</a>
-        <a className=" px-4 py-1 rounded-md bg-[#4DD0E1]">Register</a>
+        <Link to='/login' className="px-6 py-2 text-white rounded-md bg-[#4DD0E1]">Login</Link>
+        <Link to='/register' className=" px-6 text-white py-2 rounded-md bg-[#4DD0E1]">Register</Link>
       </div>
     </div>
   );

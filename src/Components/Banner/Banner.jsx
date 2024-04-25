@@ -7,7 +7,7 @@ const Banner = () => {
   return (
     <div>
       <Swiper loop={true} pagination={true} modules={[Pagination]} className="mySwiper">
-        <SwiperSlide className="slide1 rounded-lg bg-cover bg-center">
+        <SwiperSlide className="slide1 max-h-[600px] lg:min-h-[600px] rounded-lg bg-cover bg-center">
         <div className=" flex flex-col justify-center items-center text-white text-center py-52 space-y-4">
             <h1
               className="text-5xl font-semibold "
@@ -23,7 +23,7 @@ const Banner = () => {
             </p>
           </div>
         </SwiperSlide>
-        <SwiperSlide className="slide2 rounded-lg bg-cover bg-center">
+        <SwiperSlide className="slide2 max-h-[600px]   rounded-lg bg-cover bg-center">
         <div className=" flex flex-col justify-center items-center text-white text-center py-52 space-y-4">
             <h1
               className="text-5xl max-w-2xl font-semibold "
@@ -39,7 +39,7 @@ const Banner = () => {
             </p>
           </div>
         </SwiperSlide>
-        <SwiperSlide className="slide3 rounded-lg bg-cover bg-center">
+        <SwiperSlide className="slide3 max-h-[600px] rounded-lg bg-cover bg-center">
         <div className=" flex flex-col justify-center items-center text-white text-center py-52 space-y-4">
             <h1
               className="text-5xl max-w-2xl font-semibold "
@@ -55,7 +55,7 @@ const Banner = () => {
             </p>
           </div>
         </SwiperSlide>
-        <SwiperSlide className="slide4 rounded-lg bg-cover bg-center">
+        <SwiperSlide className="slide4 max-h-[600px] rounded-lg bg-cover bg-center">
         <div className=" flex flex-col justify-center items-center text-white text-center py-52 space-y-4">
             <h1
               className="text-5xl max-w-2xl font-semibold "

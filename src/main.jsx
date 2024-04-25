@@ -4,20 +4,48 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import MainLayout from "./Layout/MainLayout";
 import Home from "./Pages/Home";
+import AllCraft from "./Pages/AllCraft";
+import AddCraft from "./Pages/AddCraft";
+import MyCraft from "./Pages/MyCraft";
+import AuthProvider from "./Provider/AuthProvider";
+import Login from "./Components/Login";
+import Register from "./Components/Register";
 const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout></MainLayout>,
-    children:[
+    children: [
       {
-        path:'/',
-        element:<Home></Home>
+        path: "/",
+        element: <Home></Home>,
+      },
+      {
+        path: "/allCraft",
+        element: <AllCraft></AllCraft>,
+      },
+      {
+        path: "/addCraft",
+        element: <AddCraft></AddCraft>,
+      },
+      {
+        path: "/list",
+        element: <MyCraft></MyCraft>,
+      },
+      {
+        path:'/login',
+        element:<Login></Login>
+      },
+      {
+        path:'/register',
+        element:<Register></Register>
       }
-    ]
+    ],
   },
 ]);
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>
 );
