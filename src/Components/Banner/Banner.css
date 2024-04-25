@@ -1,0 +1,21 @@
+.slide1{
+    background-image:linear-gradient(to bottom right, rgba(25, 24, 24, 0.233), rgba(13, 13, 13, 0.612)), url(../../assets/art1.jpg);
+    max-height: 600px;
+    width: 100%;
+}
+.slide2{
+    background-image:linear-gradient(to bottom right, rgba(25, 24, 24, 0.233), rgba(13, 13, 13, 0.612)), url(../../assets/art2.jpg);
+    max-height: 600px;
+    width: 100%;
+}
+.slide3{
+    background-image:linear-gradient(to bottom right, rgba(25, 24, 24, 0.233), rgba(13, 13, 13, 0.612)), url(../../assets/art3.jpg);
+    max-height: 600px;
+    width: 100%;
+}
+.slide4{
+    background-image:linear-gradient(to bottom right, rgba(25, 24, 24, 0.233), rgba(13, 13, 13, 0.612)), url(../../assets/art4.png);
+    max-height: 600px;
+    width: 100%;
+}
+
