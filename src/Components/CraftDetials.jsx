@@ -17,7 +17,7 @@ const CraftDetials = () => {
     stock_status,
   } = craft;
   return (
-    <div className="w-11/12 mx-auto flex my-20 gap-6 items-center">
+    <div className="lg:w-11/12 mx-auto flex lg:flex-row md:flex-row flex-col px-2 my-20 gap-6 items-center">
       <div className="flex-1">
         <img className="rounded-lg" src={photo} alt="" />
       </div>
