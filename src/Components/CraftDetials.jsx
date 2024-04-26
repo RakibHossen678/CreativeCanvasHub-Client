@@ -5,7 +5,6 @@ import { useLoaderData } from "react-router-dom";
 const CraftDetials = () => {
   const craft = useLoaderData();
   const {
-    _id,
     item_name,
     category_name,
     time,
@@ -42,7 +41,7 @@ const CraftDetials = () => {
           </h2>
           <h2 className="flex items-center  ">
             <div className="flex items-center space-x-2">
-                <span className="font-medium">Ratings :</span>
+              <span className="font-medium">Ratings :</span>
               <span>
                 <FcRating className="text-xl " />
               </span>
@@ -61,7 +60,9 @@ const CraftDetials = () => {
           </h2>
         </div>
         <div className="my-6">
-            <button className="bg-[#E3B577] px-6 py-3 font-semibold rounded-lg">Add to cart</button>
+          <button className="bg-[#E3B577] px-6 py-3 font-semibold rounded-lg">
+            Add to cart
+          </button>
         </div>
       </div>
     </div>

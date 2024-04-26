@@ -128,7 +128,9 @@ const Header = () => {
               className="mt-3 z-[10] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-44"
             >
               <li>
-                <a className="justify-between">{user?.displayName  || 'Rakib Hossen'}  </a>
+                <a className="justify-between">
+                  {user?.displayName || "Rakib Hossen"}{" "}
+                </a>
               </li>
 
               <li>

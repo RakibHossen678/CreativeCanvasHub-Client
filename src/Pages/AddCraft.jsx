@@ -31,7 +31,7 @@ const AddCraft = () => {
       time,
       customization,
       stock_status,
-      description
+      description,
     };
     console.log(info);
 
@@ -147,7 +147,7 @@ const AddCraft = () => {
                     className="w-full outline-none border-none px-2 py-2 text-gray-900"
                   />
                 </div>
-                <div className="col-span-full"> 
+                <div className="col-span-full">
                   <label
                     htmlFor="email"
                     className="text-sm font-raleway font-semibold"

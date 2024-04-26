@@ -1,13 +1,12 @@
 import { useContext } from "react";
-import { Link,  useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 import toast from "react-hot-toast";
 
 const Register = () => {
   const { crateUser, updateUserProfile } = useContext(AuthContext);
 
-  
-  const Navigate=useNavigate()
+  const Navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -28,15 +27,14 @@ const Register = () => {
       .then((result) => {
         console.log(result.user);
         updateUserProfile(name, photo)
-        .then((result) => {
-          
-          toast.success("User created successfully");
-          Navigate('/')
-          form.reset();
-        })
-        .catch(error=>{
-          console.log(error)
-        })
+          .then((result) => {
+            toast.success("User created successfully");
+            Navigate("/");
+            form.reset();
+          })
+          .catch((error) => {
+            console.log(error);
+          });
       })
       .catch((error) => {
         console.log(error);

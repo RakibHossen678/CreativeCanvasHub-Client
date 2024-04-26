@@ -1,10 +1,19 @@
 import { BsCurrencyDollar } from "react-icons/bs";
 import { FcRating } from "react-icons/fc";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 const CraftItem = ({ craft }) => {
-  const { _id,item_name, category_name, time, rating, price, photo, description } =
-    craft;
+  const {
+    _id,
+    item_name,
+    category_name,
+    time,
+    rating,
+    price,
+    photo,
+    description,
+  } = craft;
   return (
     <div>
       <div className=" p-2 h-[560px] rounded-md shadow-md bg-[#f0eae904]">
@@ -52,6 +61,9 @@ const CraftItem = ({ craft }) => {
       </div>
     </div>
   );
+};
+CraftItem.propTypes = {
+  craft: PropTypes.object,
 };
 
 export default CraftItem;

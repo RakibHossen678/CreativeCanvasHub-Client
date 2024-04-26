@@ -36,13 +36,21 @@ const Footer = () => {
             625 @ David Blake Road, Mirpur, <br /> LA 14536, Dhaka
           </a>
           <a className="link link-hover">Contact : 305 533 - 1122</a>
-          <a className="link link-hover">Email : CreativeCanvasHub@email.com </a>
+          <a className="link link-hover">
+            Email : CreativeCanvasHub@email.com{" "}
+          </a>
         </nav>
         <nav>
           <h6 className="footer-title">Elsewhere</h6>
-          <a className="link link-hover flex items-center text-[16px]"><FaFacebook className="mr-2" /> Facebook</a>
-          <a className="link link-hover flex items-center text-[16px]"><FaTwitter className="mr-2"/> Twitter</a>
-          <a className="link link-hover flex items-center text-[16px]"><FaInstagram className="mr-2"/> Instagram</a>
+          <a className="link link-hover flex items-center text-[16px]">
+            <FaFacebook className="mr-2" /> Facebook
+          </a>
+          <a className="link link-hover flex items-center text-[16px]">
+            <FaTwitter className="mr-2" /> Twitter
+          </a>
+          <a className="link link-hover flex items-center text-[16px]">
+            <FaInstagram className="mr-2" /> Instagram
+          </a>
         </nav>
       </footer>
     </div>

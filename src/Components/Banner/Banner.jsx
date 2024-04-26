@@ -51,7 +51,7 @@ const Banner = () => {
               className="max-w-xl  "
               
             >
-               Join a diverse community of creators, from beginners to professionals, and embark on a journey of self-expression and discovery. With tutorials, challenges, and a supportive community, there's no limit to what you can create.
+               Join a diverse community of creators, from beginners to professionals, and embark on a journey of self-expression and discovery. With tutorials, challenges, and a supportive community, there is no limit to what you can create.
             </p>
           </div>
         </SwiperSlide>
