@@ -22,7 +22,7 @@ const Home = () => {
         </div>
         <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-10 my-10">
             {
-                loadedData.map(craft=><CraftItem key={craft._id} craft={craft}></CraftItem>)
+                loadedData.slice(0,6).map(craft=><CraftItem key={craft._id} craft={craft}></CraftItem>)
             }
         </div>
       </div>

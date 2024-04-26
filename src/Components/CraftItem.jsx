@@ -13,10 +13,12 @@ const CraftItem = ({ craft }) => {
     price,
     photo,
     description,
+    customization
   } = craft;
   return (
-    <div>
-      <div className=" p-2 h-[560px] rounded-md shadow-md bg-[#f0eae904]">
+    <div className="indicator">
+      <span className="indicator-item badge absolute right-6 lg:right-0 bg-[#E3B577]">{customization}</span>
+      <div className=" p-2 h-[560px] w-[390px] lg:w-[410px] rounded-md shadow-md bg-[#f0eae904]">
         <img
           src={photo}
           alt=""
