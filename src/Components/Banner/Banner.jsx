@@ -5,7 +5,7 @@ import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 const Banner = () => {
   return (
-    <div>
+    <div className="z-1">
       <Swiper loop={true} pagination={true} modules={[Pagination]} className="mySwiper">
         <SwiperSlide className="slide1 max-h-[600px] lg:min-h-[600px] rounded-lg bg-cover bg-center">
         <div className=" flex flex-col justify-center items-center text-white text-center py-52 space-y-4">

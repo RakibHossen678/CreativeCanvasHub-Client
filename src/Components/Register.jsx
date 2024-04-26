@@ -1,10 +1,13 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link,  useNavigate } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 import toast from "react-hot-toast";
 
 const Register = () => {
-  const { crateUser } = useContext(AuthContext);
+  const { crateUser, updateUserProfile } = useContext(AuthContext);
+
+  
+  const Navigate=useNavigate()
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -12,7 +15,7 @@ const Register = () => {
     const email = form.email.value;
     const password = form.password.value;
     const photo = form.photo.value;
-    console.log(name,photo,email, password);
+    console.log(name, photo, email, password);
 
     const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
     if (!passwordRegex.test(password)) {
@@ -24,11 +27,19 @@ const Register = () => {
     crateUser(email, password)
       .then((result) => {
         console.log(result.user);
-        toast.success('User created successfully')
-        form.reset()
+        updateUserProfile(name, photo)
+        .then((result) => {
+          
+          toast.success("User created successfully");
+          Navigate('/')
+          form.reset();
+        })
+        .catch(error=>{
+          console.log(error)
+        })
       })
       .catch((error) => {
-        console.log(error.message);
+        console.log(error);
       });
   };
 

@@ -1,10 +1,21 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
+import toast from "react-hot-toast";
 
 const Header = () => {
-  const { user } = useContext(AuthContext);
+  const { user, logOut } = useContext(AuthContext);
 
+  const handleSignOut = () => {
+    logOut()
+      .then((result) => {
+        console.log(result.user);
+        toast.success("user logged out successfully");
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
+  };
   const links = (
     <>
       <NavLink
@@ -105,28 +116,28 @@ const Header = () => {
               <div className="w-10 rounded-full">
                 <img
                   alt="Tailwind CSS Navbar component"
-                  src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+                  src={
+                    user?.photoURL ||
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQT_7Nr1EC397vWcF9rTCB5DVERMFhc1LewgmbF2yyVHj1tTz4m5XGnCfX8O72BlNQ2aiA&usqp=CAU"
+                  }
                 />
               </div>
             </div>
             <ul
               tabIndex={0}
-              className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
+              className="mt-3 z-[10] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-44"
             >
               <li>
-                <a className="justify-between">
-                  Profile
-                 
-                </a>
+                <a className="justify-between">{user?.displayName  || 'Rakib Hossen'}  </a>
               </li>
-              
+
               <li>
-                <a>Logout</a>
+                <button onClick={handleSignOut}>Logout</button>
               </li>
             </ul>
           </div>
         ) : (
-          <div>
+          <div className="space-x-3">
             <Link
               to="/login"
               className="lg:px-6 px-3 py-2 text-white rounded-md bg-[#E3B577]"
