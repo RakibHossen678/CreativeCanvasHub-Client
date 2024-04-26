@@ -3,7 +3,7 @@ import { FcRating } from "react-icons/fc";
 import { Link } from "react-router-dom";
 
 const CraftItem = ({ craft }) => {
-  const { item_name, category_name, time, rating, price, photo, description } =
+  const { _id,item_name, category_name, time, rating, price, photo, description } =
     craft;
   return (
     <div>
@@ -43,7 +43,7 @@ const CraftItem = ({ craft }) => {
           </h2>
         </div>
         <div className="flex justify-center items-center mt-6 mb-3">
-          <Link>
+          <Link to={`/${_id}`}>
             <button className="bg-[#E3B577] px-4 py-2 rounded-lg font-semibold text-[#331A15] ">
               View Details
             </button>

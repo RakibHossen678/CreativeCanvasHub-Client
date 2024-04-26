@@ -8,17 +8,24 @@ import Login from "../Components/Login";
 import Register from "../Components/Register";
 import PrivateRoute from "./PrivateRoute";
 import ErrorPage from "../Components/ErrorPage";
+import CraftDetials from "../Components/CraftDetials";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout></MainLayout>,
-    errorElement:<ErrorPage></ErrorPage>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
         element: <Home></Home>,
-        loader:()=>fetch('http://localhost:5000/crafts')
+        loader: () => fetch("http://localhost:5000/crafts"),
+      },
+      {
+        path: "/:id",
+        element: <CraftDetials></CraftDetials>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/crafts/${params.id}`),
       },
       {
         path: "/allCraft",
