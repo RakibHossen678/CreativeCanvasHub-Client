@@ -1,7 +1,10 @@
-
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../Provider/AuthProvider";
 
 const Header = () => {
+  const { user } = useContext(AuthContext);
+
   const links = (
     <>
       <NavLink
@@ -16,29 +19,38 @@ const Header = () => {
           <a>Home</a>
         </li>
       </NavLink>
-      <NavLink to='/allCraft' className={({ isActive }) =>
+      <NavLink
+        to="/allCraft"
+        className={({ isActive }) =>
           isActive
             ? "text-[#331A15] border-[#331A15] border-2 px-2 py-1 rounded-lg"
             : " text-[#331A15]"
-        }>
+        }
+      >
         <li>
           <a> All Art & craft Items</a>
         </li>
       </NavLink>
-      <NavLink to='/addCraft' className={({ isActive }) =>
+      <NavLink
+        to="/addCraft"
+        className={({ isActive }) =>
           isActive
             ? "text-[#331A15] border-[#331A15] border-2 px-2 py-1 rounded-lg"
             : " text-[#331A15]"
-        }>
+        }
+      >
         <li>
           <a>Add Craft Item</a>
         </li>
       </NavLink>
-      <NavLink to='/list' className={({ isActive }) =>
+      <NavLink
+        to="/list"
+        className={({ isActive }) =>
           isActive
             ? "text-[#331A15] border-[#331A15] border-2 px-2 py-1 rounded-lg"
             : " text-[#331A15]"
-        }>
+        }
+      >
         <li>
           <a>My Art & Craft List</a>
         </li>
@@ -73,14 +85,62 @@ const Header = () => {
             {links}
           </ul>
         </div>
-        <a className=" lg:text-3xl font-semibold text-[text-[#331A15]]">CreativeCanvasHub</a>
+        <a className=" lg:text-3xl font-semibold text-[text-[#331A15]]">
+          CreativeCanvasHub
+        </a>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className=" space-x-7 flex items-center menu-horizontal px-1">{links}</ul>
+        <ul className=" space-x-7 flex items-center menu-horizontal px-1">
+          {links}
+        </ul>
       </div>
       <div className="navbar-end space-x-4">
-        <Link to='/login' className="lg:px-6 px-3 py-2 text-white rounded-md bg-[#E3B577]">Login</Link>
-        <Link to='/register' className=" lg:px-6 px-2 text-white py-2 rounded-md bg-[#E3B577]">Register</Link>
+        {user ? (
+          <div className="dropdown dropdown-end">
+            <div
+              tabIndex={0}
+              role="button"
+              className="btn btn-ghost btn-circle avatar"
+            >
+              <div className="w-10 rounded-full">
+                <img
+                  alt="Tailwind CSS Navbar component"
+                  src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+                />
+              </div>
+            </div>
+            <ul
+              tabIndex={0}
+              className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
+            >
+              <li>
+                <a className="justify-between">
+                  Profile
+                 
+                </a>
+              </li>
+              
+              <li>
+                <a>Logout</a>
+              </li>
+            </ul>
+          </div>
+        ) : (
+          <div>
+            <Link
+              to="/login"
+              className="lg:px-6 px-3 py-2 text-white rounded-md bg-[#E3B577]"
+            >
+              Login
+            </Link>
+            <Link
+              to="/register"
+              className=" lg:px-6 px-2 text-white py-2 rounded-md bg-[#E3B577]"
+            >
+              Register
+            </Link>
+          </div>
+        )}
       </div>
     </div>
   );

@@ -5,7 +5,7 @@ import toast from "react-hot-toast";
 import { FaFacebook, FaGithub, FaGoogle } from "react-icons/fa";
 
 const Login = () => {
-  const{loginUser,googleLogin}=useContext(AuthContext)
+  const{loginUser,googleLogin,githubLogin,facebookLogin}=useContext(AuthContext)
   const handleLogin=(e)=>{
     e.preventDefault();
     const form = e.target;
@@ -29,7 +29,29 @@ const Login = () => {
     })
     .catch(error=>{
       console.log(error.message)
-      // toast.error('Already Logged in')
+      toast.error('Already Logged in')
+    })
+  }
+  const handleGithubLogin=()=>{
+    githubLogin()
+    .then((result)=>{
+      console.log(result.user)
+      toast.success('user logged in successfully')
+    })
+    .catch(error=>{
+      console.log(error.message)
+      toast.error('Already Logged in')
+    })
+  }
+  const handleFacebookLogin=()=>{
+    facebookLogin()
+    .then((result)=>{
+      console.log(result.user)
+      toast.success('user logged in successfully')
+    })
+    .catch(error=>{
+      console.log(error.message)
+      toast.error('Already Logged in')
     })
   }
   return (
@@ -78,10 +100,10 @@ const Login = () => {
           <button onClick={handleGoogleLogin} type="submit" aria-label="Log in with Google" className="p-3 rounded-sm text-2xl text-[#331A15]">
           <FaGoogle />
           </button>
-          <button aria-label="Log in with Twitter" className="p-3 rounded-sm text-2xl text-[#331A15]">
+          <button onClick={handleFacebookLogin} aria-label="Log in with Twitter" className="p-3 rounded-sm text-2xl text-[#331A15]">
           <FaFacebook />
           </button>
-          <button aria-label="Log in with GitHub" className="p-3 rounded-sm text-2xl text-[#331A15]">
+          <button onClick={handleGithubLogin} aria-label="Log in with GitHub" className="p-3 rounded-sm text-2xl text-[#331A15]">
           <FaGithub />
           </button>
         </div>
