@@ -16,6 +16,7 @@ const AddCraft = () => {
     const price = form.price.value;
     const rating = form.rating.value;
     const time = form.time.value;
+    const description = form.description.value;
     const customization = form.custom.value;
     const stock_status = form.stock.value;
 
@@ -30,6 +31,7 @@ const AddCraft = () => {
       time,
       customization,
       stock_status,
+      description
     };
     console.log(info);
 
@@ -48,7 +50,7 @@ const AddCraft = () => {
             text: "Craft added Successfully!",
             icon: "success",
           });
-          form.reset()
+          form.reset();
         }
       });
   };
@@ -124,7 +126,7 @@ const AddCraft = () => {
                   </label>
                   <input
                     id="rating"
-                    type="number"
+                    type="text"
                     name="rating"
                     placeholder="Enter rating"
                     className="w-full outline-none border-none px-2 py-2 text-gray-900"
@@ -139,8 +141,23 @@ const AddCraft = () => {
                   </label>
                   <input
                     id="time"
-                    type="datetime-local"
+                    type="text"
                     name="time"
+                    placeholder="Enter your coffee details"
+                    className="w-full outline-none border-none px-2 py-2 text-gray-900"
+                  />
+                </div>
+                <div className="col-span-full"> 
+                  <label
+                    htmlFor="email"
+                    className="text-sm font-raleway font-semibold"
+                  >
+                    Description
+                  </label>
+                  <input
+                    id="description"
+                    type="text"
+                    name="description"
                     placeholder="Enter your coffee details"
                     className="w-full outline-none border-none px-2 py-2 text-gray-900"
                   />
