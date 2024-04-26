@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
+import Swal from "sweetalert2";
 
 const AddCraft = () => {
   const { user } = useContext(AuthContext);
@@ -31,6 +32,25 @@ const AddCraft = () => {
       stock_status,
     };
     console.log(info);
+
+    fetch("http://localhost:5000/crafts", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(info),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.insertedId) {
+          Swal.fire({
+            title: "Success",
+            text: "Craft added Successfully!",
+            icon: "success",
+          });
+          form.reset()
+        }
+      });
   };
   return (
     <div>
