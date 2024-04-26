@@ -1,12 +1,31 @@
+import { useContext} from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../Provider/AuthProvider";
+import toast from "react-hot-toast";
 
 const Login = () => {
+  const{loginUser}=useContext(AuthContext)
+  const handleLogin=(e)=>{
+    e.preventDefault();
+    const form = e.target;
+    const password = form.password.value;
+    const email = form.email.value;
+   console.log(password,email)
+   loginUser(email,password)
+   .then(result=>{
+    console.log(result.user)
+    toast.success('User logged in successfully')
+   })
+   .catch(error=>{
+    toast.error(error.message)
+   })
+  }
   return (
     <div className="w-6/12 mx-auto">
       <div className="w-full p-8 space-y-3 rounded-xl ">
         <h1 className="text-2xl font-bold text-center">Login</h1>
         <h1 className="text-center">Login to access your account</h1>
-        <form noValidate="" action="" className="space-y-6">
+        <form onSubmit={handleLogin} noValidate="" action="" className="space-y-6">
           <div className="space-y-1 ">
             <label htmlFor="username" className="block py-2">
               Email
@@ -32,7 +51,7 @@ const Login = () => {
             />
             
           </div>
-          <button className="block w-full p-3 text-center rounded-sm text-white text-lg bg-[#00BCD4]">
+          <button className="block w-full p-3 text-center rounded-sm text-white text-lg bg-[#E3B577]">
             Sign in
           </button>
         </form>
@@ -44,7 +63,7 @@ const Login = () => {
           <div className="flex-1 h-px sm:w-16 bg-gray-700"></div>
         </div>
         <div className="flex justify-center space-x-4">
-          <button aria-label="Log in with Google" className="p-3 rounded-sm">
+          <button type="submit" aria-label="Log in with Google" className="p-3 rounded-sm">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 32 32"

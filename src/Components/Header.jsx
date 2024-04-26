@@ -8,8 +8,8 @@ const Header = () => {
         to="/"
         className={({ isActive }) =>
           isActive
-            ? "text-[#00BCD4] border-[#00BCD4] border-2 px-2 py-1 rounded-lg"
-            : "font bold"
+            ? "text-[#331A15] border-[#331A15] border-2 px-2 py-1 rounded-lg"
+            : " text-[#331A15]"
         }
       >
         <li>
@@ -18,8 +18,8 @@ const Header = () => {
       </NavLink>
       <NavLink to='/allCraft' className={({ isActive }) =>
           isActive
-            ? "text-[#00BCD4] border-[#00BCD4] border-2 px-2 py-1 rounded-lg"
-            : "font bold"
+            ? "text-[#331A15] border-[#331A15] border-2 px-2 py-1 rounded-lg"
+            : " text-[#331A15]"
         }>
         <li>
           <a> All Art & craft Items</a>
@@ -27,8 +27,8 @@ const Header = () => {
       </NavLink>
       <NavLink to='/addCraft' className={({ isActive }) =>
           isActive
-            ? "text-[#00BCD4] border-[#00BCD4] border-2 px-2 py-1 rounded-lg"
-            : "font bold"
+            ? "text-[#331A15] border-[#331A15] border-2 px-2 py-1 rounded-lg"
+            : " text-[#331A15]"
         }>
         <li>
           <a>Add Craft Item</a>
@@ -36,8 +36,8 @@ const Header = () => {
       </NavLink>
       <NavLink to='/list' className={({ isActive }) =>
           isActive
-            ? "text-[#00BCD4] border-[#00BCD4] border-2 px-2 py-1 rounded-lg"
-            : "font bold"
+            ? "text-[#331A15] border-[#331A15] border-2 px-2 py-1 rounded-lg"
+            : " text-[#331A15]"
         }>
         <li>
           <a>My Art & Craft List</a>
@@ -47,7 +47,7 @@ const Header = () => {
   );
 
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar bg-base-100 mb-4">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -73,14 +73,14 @@ const Header = () => {
             {links}
           </ul>
         </div>
-        <a className=" lg:text-3xl font-semibold">CreativeCanvasHub</a>
+        <a className=" lg:text-3xl font-semibold text-[text-[#331A15]]">CreativeCanvasHub</a>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className=" space-x-7 menu-horizontal px-1">{links}</ul>
+        <ul className=" space-x-7 flex items-center menu-horizontal px-1">{links}</ul>
       </div>
       <div className="navbar-end space-x-4">
-        <Link to='/login' className="px-6 py-2 text-white rounded-md bg-[#4DD0E1]">Login</Link>
-        <Link to='/register' className=" px-6 text-white py-2 rounded-md bg-[#4DD0E1]">Register</Link>
+        <Link to='/login' className="lg:px-6 px-3 py-2 text-white rounded-md bg-[#E3B577]">Login</Link>
+        <Link to='/register' className=" lg:px-6 px-2 text-white py-2 rounded-md bg-[#E3B577]">Register</Link>
       </div>
     </div>
   );
