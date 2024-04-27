@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
-import CraftItem from "../Components/CraftItem";
+import MyCard from "../Components/MyCard";
 
 const MyCraft = () => {
   const { user } = useContext(AuthContext);
@@ -13,7 +13,7 @@ const MyCraft = () => {
         console.log(data);
         setLoadedData(data);
       });
-  }, [user]);
+  }, []);
   return (
     <div>
       <div className="w-full mx-auto flex mt-6 mb-16">
@@ -36,8 +36,8 @@ const MyCraft = () => {
       </div>
       <h1 className="text-4xl font-medium text-center">My Art & Craft</h1>
       <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-10 my-10">
-        {loadedData.slice(0, 6).map((craft) => (
-          <CraftItem key={craft._id} craft={craft}></CraftItem>
+        {loadedData.map((craft) => (
+          <MyCard key={craft._id} craft={craft}></MyCard>
         ))}
       </div>
     </div>
