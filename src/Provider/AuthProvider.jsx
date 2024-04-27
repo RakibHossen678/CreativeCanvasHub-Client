@@ -9,7 +9,7 @@ import {
   signOut,
   updateProfile,
 } from "firebase/auth";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 import { createContext, useEffect, useState } from "react";
 import auth from "../firebase/firebase.config";
 
@@ -72,14 +72,14 @@ const AuthProvider = ({ children }) => {
     facebookLogin,
     logOut,
     loading,
-    updateUserProfile
+    updateUserProfile,
   };
   return (
     <AuthContext.Provider value={AuthInfo}>{children}</AuthContext.Provider>
   );
 };
-AuthProvider.propTypes={
-  children:PropTypes.node
-}
+AuthProvider.propTypes = {
+  children: PropTypes.node,
+};
 
 export default AuthProvider;

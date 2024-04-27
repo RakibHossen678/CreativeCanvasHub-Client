@@ -1,6 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import Banner from "../Components/Banner/Banner";
 import CraftItem from "../Components/CraftItem";
+import Gallery from "../Components/Gallery";
 
 const Home = () => {
   const loadedData=useLoaderData()
@@ -24,6 +25,9 @@ const Home = () => {
             {
                 loadedData.slice(0,6).map(craft=><CraftItem key={craft._id} craft={craft}></CraftItem>)
             }
+        </div>
+        <div>
+          <Gallery></Gallery>
         </div>
       </div>
       

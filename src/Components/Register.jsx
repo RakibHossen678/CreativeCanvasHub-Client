@@ -28,6 +28,7 @@ const Register = () => {
         console.log(result.user);
         updateUserProfile(name, photo)
           .then((result) => {
+            console.log(result)
             toast.success("User created successfully");
             Navigate("/");
             form.reset();

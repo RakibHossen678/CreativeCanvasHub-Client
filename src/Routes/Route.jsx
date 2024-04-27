@@ -62,10 +62,15 @@ const router = createBrowserRouter([
         element: <Register></Register>,
       },
       {
-        path:'/update/:id',
-        element:<Update></Update>,
-        loader:({params})=>fetch(`http://localhost:5000/crafts/${params.id}`)
-      }
+        path: "/update/:id",
+        element: (
+          <PrivateRoute>
+            <Update></Update>
+          </PrivateRoute>
+        ),
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/crafts/${params.id}`),
+      },
     ],
   },
 ]);
