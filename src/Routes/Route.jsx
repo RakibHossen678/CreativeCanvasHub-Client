@@ -9,6 +9,7 @@ import Register from "../Components/Register";
 import PrivateRoute from "./PrivateRoute";
 import ErrorPage from "../Components/ErrorPage";
 import CraftDetials from "../Components/CraftDetials";
+import Update from "../Components/Update";
 
 const router = createBrowserRouter([
   {
@@ -60,6 +61,11 @@ const router = createBrowserRouter([
         path: "/register",
         element: <Register></Register>,
       },
+      {
+        path:'/update/:id',
+        element:<Update></Update>,
+        loader:({params})=>fetch(`http://localhost:5000/crafts/${params.id}`)
+      }
     ],
   },
 ]);

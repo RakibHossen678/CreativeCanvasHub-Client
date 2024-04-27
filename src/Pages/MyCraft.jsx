@@ -18,7 +18,7 @@ const MyCraft = () => {
         setCraftData(data)
         
       });
-  }, []);
+  }, [user]);
   
   const handleSorting=(data)=>{
     if(data==='ok'){

@@ -92,9 +92,11 @@ const MyCard = ({ craft }) => {
               View Details
             </button>
           </Link>
-          <button className="bg-[#E3B577] px-4 py-2 rounded-lg font-semibold text-[#331A15] ">
-            Update
-          </button>
+          <Link to={`/update/${_id}`}>
+            <button className="bg-[#E3B577] px-4 py-2 rounded-lg font-semibold text-[#331A15] ">
+              Update
+            </button>
+          </Link>
           <button
             onClick={() => handleDelete(_id)}
             className="bg-[#E3B577] px-4 py-2 rounded-lg font-semibold text-[#331A15] "
