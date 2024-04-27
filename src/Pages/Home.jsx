@@ -2,6 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import Banner from "../Components/Banner/Banner";
 import CraftItem from "../Components/CraftItem";
 import Gallery from "../Components/Gallery";
+import Artist from "../Components/Artist";
 
 const Home = () => {
   const loadedData=useLoaderData()
@@ -28,6 +29,7 @@ const Home = () => {
         </div>
         <div>
           <Gallery></Gallery>
+          <Artist></Artist>
         </div>
       </div>
       
