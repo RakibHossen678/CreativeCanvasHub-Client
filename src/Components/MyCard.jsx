@@ -1,12 +1,9 @@
-// import { useContext } from "react";
 import { BsCurrencyDollar } from "react-icons/bs";
 import { FcRating } from "react-icons/fc";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
-// import { AuthContext } from "../Provider/AuthProvider";
 
 const MyCard = ({ craft }) => {
-  // const {user}=useContext(AuthContext)
   const {
     _id,
     item_name,
@@ -43,7 +40,6 @@ const MyCard = ({ craft }) => {
                 text: "Your file has been deleted.",
                 icon: "success",
               });
-            //   const remaining=
             }
           });
       }
