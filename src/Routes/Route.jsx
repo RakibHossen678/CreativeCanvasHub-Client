@@ -11,6 +11,7 @@ import ErrorPage from "../Components/ErrorPage";
 import CraftDetials from "../Components/CraftDetials";
 import Update from "../Components/Update";
 import CategoryData from "../Components/CategoryData";
+import CategoryDetails from "../Components/CategoryDetails";
 
 const router = createBrowserRouter([
   {
@@ -52,7 +53,7 @@ const router = createBrowserRouter([
           <PrivateRoute>
             <MyCraft></MyCraft>,
           </PrivateRoute>
-        ),
+        )
       },
       {
         path: "/login",
@@ -72,12 +73,18 @@ const router = createBrowserRouter([
         loader: ({ params }) =>
           fetch(`http://localhost:5000/crafts/${params.id}`),
       },
+      
       {
         path:'/category/:name',
         element:<CategoryData></CategoryData>,
         loader:({params})=>fetch(`http://localhost:5000/category/${params.name}`)
+      },
+      {
+        path:'categories/:catItem',
+        element:<CategoryDetails></CategoryDetails>,
+        loader:({params})=>fetch(`http://localhost:5000/categories/${params.catItem}`)
       }
-    ],
+    ]
   },
 ]);
 

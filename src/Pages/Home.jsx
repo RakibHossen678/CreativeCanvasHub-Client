@@ -57,7 +57,7 @@ const Home = () => {
               <Link to={`/category/${catName.subcategory_Name}`} key={catName._id}>
                 <div
                   
-                  className="max-w-xs p-2 rounded-md shadow-md "
+                  className="max-w-xs p-2 h-[360px] rounded-md shadow-md "
                 >
                   <img
                     src={catName.image}
