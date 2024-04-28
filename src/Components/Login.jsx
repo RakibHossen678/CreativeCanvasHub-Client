@@ -3,6 +3,8 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 import toast from "react-hot-toast";
 import { FaFacebook, FaGithub, FaGoogle } from "react-icons/fa";
+import Lottie from "lottie-react";
+import loginImg from '../assets/login.json'
 
 const Login = () => {
   const { loginUser, googleLogin, githubLogin, facebookLogin } =
@@ -64,8 +66,12 @@ const Login = () => {
       });
   };
   return (
-    <div className="lg:w-6/12 mx-auto">
-      <div className="w-full p-8 space-y-3 rounded-xl ">
+    <div className="lg:w-10/12 gap-10 lg:flex-row flex-col mx-auto flex justify-between items-center">
+      <div className="flex-1 ">
+      <Lottie animationData={loginImg} loop={true} />
+
+      </div>
+      <div className="lg:flex-1 w-full p-8 space-y-3 rounded-xl ">
         <h1 className="text-2xl font-bold text-center">Login</h1>
         <h1 className="text-center">Login to access your account</h1>
         <form

@@ -2,6 +2,8 @@ import { useContext, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 import toast from "react-hot-toast";
+import Lottie from "lottie-react";
+import logo from '../assets/logo.json'
 
 const Header = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -110,9 +112,12 @@ const Header = () => {
             {links}
           </ul>
         </div>
-        <a className=" lg:text-3xl  font-semibold  bg-gradient-to-r from-orange-700 via-blue-500 to-green-400 text-transparent bg-clip-text bg-300% animate-gradient">
-          CreativeCanvasHub
-        </a>
+        <div className="flex items-center">
+        <Lottie className="w-16 lg:block hidden" animationData={logo} loop={true} />
+          <a className=" lg:text-3xl  font-semibold  bg-gradient-to-r from-orange-700 via-blue-500 to-green-400 text-transparent bg-clip-text bg-300% animate-gradient">
+            CreativeCanvasHub
+          </a>
+        </div>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className=" space-x-7 flex items-center menu-horizontal px-1">
@@ -154,16 +159,16 @@ const Header = () => {
             </ul>
           </div>
         ) : (
-          <div className="space-x-3">
+          <div className="space-x-1 lg:space-x-3">
             <Link
               to="/login"
-              className="lg:px-6 px-3 py-2 dark:text-gray-100  rounded-md bg-[#00BFA5] text-white"
+              className="lg:px-6 px-1 py-1 lg:py-2 dark:text-gray-100  rounded-md bg-[#00BFA5] text-white"
             >
               Login
             </Link>
             <Link
               to="/register"
-              className=" lg:px-6 px-2  py-2 rounded-md bg-[#00BFA5] text-white"
+              className=" lg:px-6 px-1  py-1 lg:py-2 rounded-md bg-[#00BFA5] text-white"
             >
               Register
             </Link>
