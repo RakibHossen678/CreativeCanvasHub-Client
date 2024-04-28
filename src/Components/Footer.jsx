@@ -7,7 +7,7 @@ const Footer = () => {
       <footer className="footer p-10 lg:w-11/12 mx-auto text-base-content">
         <aside className="max-w-md">
           <div>
-            <h1 className="text-3xl font-bold py-2">CreativeCanvasHub</h1>
+            <h1 className="text-3xl font-bold py-2 bg-gradient-to-r from-orange-700 via-blue-500 to-green-400 text-transparent bg-clip-text bg-300% animate-gradient">CreativeCanvasHub</h1>
             <p>
               Arts and crafts evolved from the fixed notions of fundamental
               ideas to the modern usage of available materials and truthful

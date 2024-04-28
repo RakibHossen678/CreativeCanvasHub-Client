@@ -3,7 +3,8 @@ import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 import toast from "react-hot-toast";
 import Lottie from "lottie-react";
-import logo from '../assets/logo.json'
+import logo from "../assets/logo.json";
+import { Tooltip } from "react-tooltip";
 
 const Header = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -113,7 +114,11 @@ const Header = () => {
           </ul>
         </div>
         <div className="flex items-center">
-        <Lottie className="w-16 lg:block hidden" animationData={logo} loop={true} />
+          <Lottie
+            className="w-16 lg:block hidden"
+            animationData={logo}
+            loop={true}
+          />
           <a className=" lg:text-3xl  font-semibold  bg-gradient-to-r from-orange-700 via-blue-500 to-green-400 text-transparent bg-clip-text bg-300% animate-gradient">
             CreativeCanvasHub
           </a>
@@ -127,36 +132,32 @@ const Header = () => {
 
       <div className="navbar-end space-x-4">
         {user ? (
-          <div className="dropdown dropdown-end">
-            <div
-              tabIndex={0}
-              role="button"
-              className="btn btn-ghost btn-circle avatar"
-            >
-              <div className="w-10 rounded-full">
+          <div className="z-10">
+            <div className="z-10">
+              <a id="clickable">
                 <img
+                  className="  w-10 h-10 rounded-full"
                   alt="Tailwind CSS Navbar component"
                   src={
                     user?.photoURL ||
                     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQT_7Nr1EC397vWcF9rTCB5DVERMFhc1LewgmbF2yyVHj1tTz4m5XGnCfX8O72BlNQ2aiA&usqp=CAU"
                   }
                 />
-              </div>
-            </div>
-            <ul
-              tabIndex={0}
-              className="mt-3 z-[10] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-44"
-            >
-              <li>
-                <a className="justify-between">
-                  {user?.displayName || "Rakib Hossen"}
-                </a>
-              </li>
+              </a>
+              <Tooltip anchorSelect="#clickable" clickable>
+                <ul className="list-none">
+                  <li className="">
+                    <a className="justify-between">
+                      {user?.displayName || "Rakib Hossen"}
+                    </a>
+                  </li>
 
-              <li>
-                <button onClick={handleSignOut}>Logout</button>
-              </li>
-            </ul>
+                  <li>
+                    <button onClick={handleSignOut}>Logout</button>
+                  </li>
+                </ul>
+              </Tooltip >
+            </div>
           </div>
         ) : (
           <div className="space-x-1 lg:space-x-3">
