@@ -46,7 +46,7 @@ const CategoryData = () => {
               </div>
               <div className="flex item-center justify-center ">
                 <Link to={`/categories/${catData.item_name}`}>
-                  <button className="bg-[#E3B577] px-4 py-2 rounded-lg font-semibold text-[#331A15] ">
+                  <button className="bg-[#00BFA5] text-white px-4 py-2 rounded-lg font-semibold  ">
                     View Details
                   </button>
                 </Link>

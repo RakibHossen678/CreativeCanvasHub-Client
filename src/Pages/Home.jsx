@@ -24,10 +24,10 @@ const Home = () => {
       <Banner></Banner>
       <div className="my-20">
         <div className="text-center w-full flex justify-center items-center flex-col">
-          <h1 className="text-4xl text-[#331A15] font-semibold py-2">
+          <h1 className="text-4xl font-semibold py-2">
             Work of Art
           </h1>
-          <p className="max-w-2xl pt-5 text-gray-700 text-center ">
+          <p className="max-w-2xl pt-5  text-center ">
             Explore the versatility of different mediums, from watercolors to
             digital brushes. Connect with artists worldwide, learn from experts,
             and let your imagination run wild in a supportive and inspiring
@@ -45,7 +45,7 @@ const Home = () => {
             <h1 className="text-4xl font-medium py-3 ">
               Painting and Drawing categories
             </h1>
-            <p className="py-3">
+            <p className="py-3 ">
               Dive into a world of boundless creativity with our Art & Craft
               Categories section. Discover a spectrum of artistic pursuits, from
               traditional to contemporary, meticulously curated to inspire the

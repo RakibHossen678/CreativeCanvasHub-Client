@@ -41,7 +41,7 @@ const MyCraft = () => {
           <div
             tabIndex={0}
             role="button"
-            className="px-6 rounded-lg font-medium py-3 bg-[#E3B577] m-1"
+            className="px-6 rounded-lg font-medium py-3 bg-[#00BFA5] text-white m-1"
           >
             Customization
           </div>

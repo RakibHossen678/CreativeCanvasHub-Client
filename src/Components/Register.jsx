@@ -105,7 +105,7 @@ const Register = () => {
           </div>
           <button
             type="submit"
-            className="block w-full p-3 text-center rounded-sm text-white text-lg bg-[#E3B577]"
+            className="block w-full p-3 text-center rounded-sm  text-lg bg-[#00BFA5] text-white"
           >
             Register
           </button>

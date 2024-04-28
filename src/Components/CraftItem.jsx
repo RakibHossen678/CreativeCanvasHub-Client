@@ -17,7 +17,7 @@ const CraftItem = ({ craft }) => {
   } = craft;
   return (
     <div className="indicator">
-      <span className="indicator-item badge absolute right-6 lg:right-0 bg-[#E3B577]">{customization}</span>
+      <span className="indicator-item badge absolute right-6 lg:right-0 bg-[#00BFA5] text-white">{customization}</span>
       <div className=" p-2 h-[560px] w-[390px] lg:w-[410px] rounded-md shadow-md bg-[#f0eae904]">
         <img
           src={photo}
@@ -32,7 +32,7 @@ const CraftItem = ({ craft }) => {
             <h2 className="text- font-semibold tracking-wide">
               <span>Category :</span> {category_name}
             </h2>
-            <h2 className="flex items-center text-xl font-semibold text-[#714e20]">
+            <h2 className="flex items-center text-xl font-semibold text-[#00BFA5]">
               <span>
                 <BsCurrencyDollar className="" />
               </span>
@@ -55,7 +55,7 @@ const CraftItem = ({ craft }) => {
         </div>
         <div className="flex justify-center items-center mt-6 mb-3">
           <Link to={`/${_id}`}>
-            <button className="bg-[#E3B577] px-4 py-2 rounded-lg font-semibold text-[#331A15] ">
+            <button className="bg-[#00BFA5] text-white px-4 py-2 rounded-lg font-semibold  ">
               View Details
             </button>
           </Link>

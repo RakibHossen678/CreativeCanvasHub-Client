@@ -100,7 +100,7 @@ const Login = () => {
               className="w-full px-4 py-3 rounded-md border-2 outline-none"
             />
           </div>
-          <button className="block w-full p-3 text-center rounded-sm text-white text-lg bg-[#E3B577]">
+          <button className="block w-full p-3 text-center rounded-sm text-white text-lg bg-[#00BFA5] ">
             Sign in
           </button>
         </form>

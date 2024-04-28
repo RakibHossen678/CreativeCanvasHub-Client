@@ -217,7 +217,7 @@ const AddCraft = () => {
             <input
               type="submit"
               value="Add"
-              className="bg-[#D2B48C] py-2 border-2 border-[#331A15] font-rancho text-xl font-semibold text-[#331A15]"
+              className="bg-[#00BFA5] text-white py-2 border-2  font-rancho text-xl font-semibold "
             />
           </form>
         </section>

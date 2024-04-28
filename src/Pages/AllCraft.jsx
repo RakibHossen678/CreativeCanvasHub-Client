@@ -6,7 +6,7 @@ const AllCraft = () => {
   return (
     <div>
       <div className="text-center w-full flex justify-center items-center flex-col">
-        <h1 className="text-4xl text-[#331A15] font-semibold py-2">
+        <h1 className="text-4xl  font-semibold py-2">
           All drawing and painting
         </h1>
       </div>
@@ -36,7 +36,7 @@ const AllCraft = () => {
                   <td>{craft.customization}</td>
                   <td>
                     <Link to={`/${craft._id}`}>
-                      <button className="bg-[#E3B577] px-3 py-2 rounded-lg font-semibold text-[#331A15] ">
+                      <button className="bg-[#00BFA5] text-white px-3 py-2 rounded-lg font-semibold  ">
                         View Details
                       </button>
                     </Link>

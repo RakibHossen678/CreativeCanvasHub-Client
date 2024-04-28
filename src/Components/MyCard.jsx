@@ -48,7 +48,7 @@ const MyCard = ({ craft }) => {
 
   return (
     <div className="indicator">
-      <span className="indicator-item badge absolute right-6 lg:right-0 bg-[#E3B577]">
+      <span className="indicator-item badge absolute right-6 lg:right-0 bg-[#00BFA5] text-white">
         {customization}
       </span>
       <div className=" p-2 h-[560px] w-[390px] lg:w-[410px] rounded-md shadow-md bg-[#f0eae904]">
@@ -88,18 +88,18 @@ const MyCard = ({ craft }) => {
         </div>
         <div className="flex  justify-around items-center mt-6 mb-3">
           <Link to={`/${_id}`}>
-            <button className="bg-[#E3B577] px-4 py-2 rounded-lg font-semibold text-[#331A15] ">
+            <button className="bg-[#00BFA5] text-white px-4 py-2 rounded-lg font-semibold  ">
               View Details
             </button>
           </Link>
           <Link to={`/update/${_id}`}>
-            <button className="bg-[#E3B577] px-4 py-2 rounded-lg font-semibold text-[#331A15] ">
+            <button className="bg-[#00BFA5] text-white px-4 py-2 rounded-lg font-semibold  ">
               Update
             </button>
           </Link>
           <button
             onClick={() => handleDelete(_id)}
-            className="bg-[#E3B577] px-4 py-2 rounded-lg font-semibold text-[#331A15] "
+            className="bg-[#00BFA5] text-white px-4 py-2 rounded-lg font-semibold  "
           >
             Delete
           </button>

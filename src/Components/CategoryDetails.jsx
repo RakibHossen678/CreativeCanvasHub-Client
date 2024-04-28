@@ -56,7 +56,7 @@ const CategoryDetails = () => {
           </h2>
         </div>
         <div className="my-6">
-          <button className="bg-[#E3B577] px-6 py-3 font-semibold rounded-lg">
+          <button className="bg-[#00BFA5] text-white px-6 py-3 font-semibold rounded-lg">
             Add to cart
           </button>
         </div>
