@@ -2,13 +2,13 @@ import { BsCurrencyDollar } from "react-icons/bs";
 import { FcRating } from "react-icons/fc";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import PropTypes from "prop-types";
 
 const MyCard = ({ craft }) => {
   const {
     _id,
     item_name,
     category_name,
-    time,
     rating,
     price,
     photo,
@@ -107,6 +107,10 @@ const MyCard = ({ craft }) => {
       </div>
     </div>
   );
+};
+
+MyCard.propTypes = {
+  craft: PropTypes.object,
 };
 
 export default MyCard;

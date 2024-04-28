@@ -110,7 +110,7 @@ const Header = () => {
             {links}
           </ul>
         </div>
-        <a className=" lg:text-3xl  font-semibold text-[text-[#331A15]]">
+        <a className=" lg:text-3xl  font-semibold  bg-gradient-to-r from-orange-700 via-blue-500 to-green-400 text-transparent bg-clip-text bg-300% animate-gradient">
           CreativeCanvasHub
         </a>
       </div>
