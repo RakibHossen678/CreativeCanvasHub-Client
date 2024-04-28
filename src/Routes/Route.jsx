@@ -10,6 +10,7 @@ import PrivateRoute from "./PrivateRoute";
 import ErrorPage from "../Components/ErrorPage";
 import CraftDetials from "../Components/CraftDetials";
 import Update from "../Components/Update";
+import CategoryData from "../Components/CategoryData";
 
 const router = createBrowserRouter([
   {
@@ -71,6 +72,11 @@ const router = createBrowserRouter([
         loader: ({ params }) =>
           fetch(`http://localhost:5000/crafts/${params.id}`),
       },
+      {
+        path:'/category/:name',
+        element:<CategoryData></CategoryData>,
+        loader:({params})=>fetch(`http://localhost:5000/category/${params.name}`)
+      }
     ],
   },
 ]);
