@@ -22,7 +22,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch("http://localhost:5000/crafts"),
+        loader: () => fetch("https://assignment10-server-theta-dun.vercel.app/crafts"),
       },
       {
         path: "/:id",
@@ -32,12 +32,12 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/crafts/${params.id}`),
+          fetch(`https://assignment10-server-theta-dun.vercel.app/crafts/${params.id}`),
       },
       {
         path: "/allCraft",
         element: <AllCraft></AllCraft>,
-        loader: () => fetch("http://localhost:5000/crafts"),
+        loader: () => fetch("https://assignment10-server-theta-dun.vercel.app/crafts"),
       },
       {
         path: "/addCraft",
@@ -71,14 +71,14 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/crafts/${params.id}`),
+          fetch(`https://assignment10-server-theta-dun.vercel.app/crafts/${params.id}`),
       },
 
       {
         path: "/category/:name",
         element: <CategoryData></CategoryData>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/category/${params.name}`),
+          fetch(`https://assignment10-server-theta-dun.vercel.app/category/${params.name}`),
       },
       {
         path: "categories/:catItem",
@@ -88,7 +88,7 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/categories/${params.catItem}`),
+          fetch(`https://assignment10-server-theta-dun.vercel.app/categories/${params.catItem}`),
       },
     ],
   },

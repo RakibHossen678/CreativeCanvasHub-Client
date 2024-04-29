@@ -14,7 +14,7 @@ const Home = () => {
   const [categoryName, setCategoryName] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/categoryName")
+    fetch("https://assignment10-server-theta-dun.vercel.app/categoryName")
       .then((res) => res.json())
       .then((data) => {
         setCategoryName(data);

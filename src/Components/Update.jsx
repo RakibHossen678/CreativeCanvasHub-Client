@@ -30,7 +30,7 @@ const Update = () => {
       description,
     };
     console.log(info);
-    fetch(`http://localhost:5000/crafts/${loadedData._id}`, {
+    fetch(`https://assignment10-server-theta-dun.vercel.app/crafts/${loadedData._id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

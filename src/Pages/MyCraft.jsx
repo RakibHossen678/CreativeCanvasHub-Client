@@ -12,7 +12,7 @@ const MyCraft = () => {
   
   console.log(user);
   useEffect(() => {
-    fetch(`http://localhost:5000/myCart/${user?.email}`)
+    fetch(`https://assignment10-server-theta-dun.vercel.app/myCart/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

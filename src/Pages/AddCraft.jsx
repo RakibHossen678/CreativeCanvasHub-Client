@@ -35,7 +35,7 @@ const AddCraft = () => {
     };
     console.log(info);
 
-    fetch("http://localhost:5000/crafts", {
+    fetch("https://assignment10-server-theta-dun.vercel.app/crafts", {
       method: "POST",
       headers: {
         "content-type": "application/json",
