@@ -53,7 +53,7 @@ const router = createBrowserRouter([
           <PrivateRoute>
             <MyCraft></MyCraft>,
           </PrivateRoute>
-        )
+        ),
       },
       {
         path: "/login",
@@ -73,18 +73,24 @@ const router = createBrowserRouter([
         loader: ({ params }) =>
           fetch(`http://localhost:5000/crafts/${params.id}`),
       },
-      
+
       {
-        path:'/category/:name',
-        element:<CategoryData></CategoryData>,
-        loader:({params})=>fetch(`http://localhost:5000/category/${params.name}`)
+        path: "/category/:name",
+        element: <CategoryData></CategoryData>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/category/${params.name}`),
       },
       {
-        path:'categories/:catItem',
-        element:<CategoryDetails></CategoryDetails>,
-        loader:({params})=>fetch(`http://localhost:5000/categories/${params.catItem}`)
-      }
-    ]
+        path: "categories/:catItem",
+        element: (
+          <PrivateRoute>
+            <CategoryDetails></CategoryDetails>
+          </PrivateRoute>
+        ),
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/categories/${params.catItem}`),
+      },
+    ],
   },
 ]);
 

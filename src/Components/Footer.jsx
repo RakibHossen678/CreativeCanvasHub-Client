@@ -7,7 +7,9 @@ const Footer = () => {
       <footer className="footer p-10 lg:w-11/12 mx-auto text-base-content">
         <aside className="max-w-md">
           <div>
-            <h1 className="text-3xl font-bold py-2 bg-gradient-to-r from-orange-700 via-blue-500 to-green-400 text-transparent bg-clip-text bg-300% animate-gradient">CreativeCanvasHub</h1>
+            <h1 className="text-3xl font-bold py-2 bg-gradient-to-r from-orange-700 via-blue-500 to-green-400 text-transparent bg-clip-text bg-300% animate-gradient">
+              CreativeCanvasHub
+            </h1>
             <p>
               Arts and crafts evolved from the fixed notions of fundamental
               ideas to the modern usage of available materials and truthful
@@ -52,6 +54,11 @@ const Footer = () => {
             <FaInstagram className="mr-2" /> Instagram
           </a>
         </nav>
+      </footer>
+      <footer className="footer items-center flex justify-center p-4 bg-gray-200 ">
+        <aside className="items-center grid-flow-col">
+          <p className="text-center">  Copyright © 2024 - All right reserved by CreativeCanvasHub</p>
+        </aside>
       </footer>
     </div>
   );

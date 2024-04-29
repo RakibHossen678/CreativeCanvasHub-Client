@@ -8,6 +8,8 @@ const MyCraft = () => {
   const [loadedData, setLoadedData] = useState([]);
   
   
+   
+  
   console.log(user);
   useEffect(() => {
     fetch(`http://localhost:5000/myCart/${user?.email}`)

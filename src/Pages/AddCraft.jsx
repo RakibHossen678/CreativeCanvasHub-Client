@@ -56,7 +56,7 @@ const AddCraft = () => {
   };
   return (
     <div>
-      <div className="lg:w-8/12 mx-1  lg:mx-auto py-6 bg-[#F4F3F0]">
+      <div className="lg:w-8/12 mx-1 my-10  lg:mx-auto py-6 bg-[#F4F3F0]">
         <div className="text-center max-w-3xl mx-auto">
           <h1 className="font-rancho text-4xl font-semibold py-3 text-[#374151] drop-shadow-2xl">
             Add New Painting or Drawing
@@ -76,7 +76,7 @@ const AddCraft = () => {
                     id="photo"
                     type="text"
                     name="photo"
-                    placeholder="Enter coffee PhotURl"
+                    placeholder="Enter  PhotURl"
                     className="w-full outline-none border-none px-2 py-2 text-gray-900  "
                   />
                 </div>
@@ -88,7 +88,7 @@ const AddCraft = () => {
                     id="name"
                     name="name"
                     type="text"
-                    placeholder="Enter coffee quantity"
+                    placeholder="Enter  quantity"
                     className="w-full outline-none border-none px-2 py-2 text-gray-900"
                   />
                 </div>
@@ -143,7 +143,7 @@ const AddCraft = () => {
                     id="time"
                     type="text"
                     name="time"
-                    placeholder="Enter your coffee details"
+                    placeholder="Enter your  details"
                     className="w-full outline-none border-none px-2 py-2 text-gray-900"
                   />
                 </div>
@@ -158,11 +158,11 @@ const AddCraft = () => {
                     id="description"
                     type="text"
                     name="description"
-                    placeholder="Enter your coffee details"
+                    placeholder="Enter your  details"
                     className="w-full outline-none border-none px-2 py-2 text-gray-900"
                   />
                 </div>
-                <div className="flex items-center justify-between col-span-full">
+                <div className="flex flex-col lg:flex-row items-center justify-between col-span-full">
                   <div className="space-y-1 text-sm items-center flex ">
                     <legend className="mr-4 font-medium">Customization:</legend>
 

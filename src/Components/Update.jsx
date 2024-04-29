@@ -1,7 +1,8 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const Update = () => {
+  const Navigate=useNavigate()
   const loadedData = useLoaderData();
   console.log(loadedData);
   const handleUpdate = (e) => {
@@ -44,6 +45,7 @@ const Update = () => {
             text: "Craft Updated Successfully!",
             icon: "success",
           });
+          Navigate('/list')
         }
       });
   };
