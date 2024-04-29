@@ -2,7 +2,7 @@
 
 - [CreativeCanvasHub](https://assignment10-a34c2.web.app/) 
 
-Currently, two official plugins are available:
+
 
 ## Features and Characteristics:
 - ** If a user is logged in, the user image will show on the Navbar and When you hover over the user image it will show the user name and logout  button
