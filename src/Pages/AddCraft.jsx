@@ -1,9 +1,11 @@
 import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 
 const AddCraft = () => {
   const { user } = useContext(AuthContext);
+  const navigate=useNavigate()
   console.log(user);
   const updateCraft = (e) => {
     e.preventDefault();
@@ -34,6 +36,7 @@ const AddCraft = () => {
       description,
     };
     console.log(info);
+    console.log(2)
 
     fetch("https://assignment10-server-theta-dun.vercel.app/crafts", {
       method: "POST",
@@ -51,6 +54,7 @@ const AddCraft = () => {
             icon: "success",
           });
           form.reset();
+          navigate('/list')
         }
       });
   };

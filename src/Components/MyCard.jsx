@@ -5,7 +5,7 @@ import Swal from "sweetalert2";
 import PropTypes from "prop-types";
 import { Slide, Zoom } from "react-awesome-reveal";
 
-const MyCard = ({ craft }) => {
+const MyCard = ({ craft ,loadedData,setLoadedData}) => {
   const {
     _id,
     item_name,
@@ -41,6 +41,8 @@ const MyCard = ({ craft }) => {
                 text: "Your file has been deleted.",
                 icon: "success",
               });
+              const filterData=loadedData.filter(del=>del._id!==_id)
+              setLoadedData(filterData)
             }
           });
       }
