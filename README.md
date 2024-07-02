@@ -27,4 +27,10 @@
 - [react-icons](https://react-icons.github.io/react-icons/) uses  for icons
 - [react-awesome-reveal](https://www.npmjs.com/package/react-awesome-reveal) uses  for animation
 - [lottie-react](https://www.npmjs.com/package/lottie-react) uses  for video animation
-- [swiper js](https://swiperjs.com/) uses  for slider 
+- [swiper js](https://swiperjs.com/) uses  for slider
+
+#### Cloning and Running the Project
+```sh
+git clone https://github.com/RakibHossen678/CreativeCanvasHub-Client
+npm install
+npm run dev
